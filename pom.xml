@@ -37,9 +37,9 @@
 		<url>http://github.com/got5</url>
 	</issueManagement>
 	<scm>
-	    <connection>scm:git:git@github.com:got5/tapestry5-jquery.git</connection>
-	    <developerConnection>scm:git:git@github.com:got5/tapestry5-jquery.git</developerConnection>
-	    <url>git@github.com:got5/tapestry5-jquery.git</url>
+	    <connection>scm:git:git@github.com:Allogy/tapestry5-jquery.git</connection>
+	    <developerConnection>scm:git:git@github.com:Allogy/tapestry5-jquery.git</developerConnection>
+	    <url>git@github.com:Allogy/tapestry5-jquery.git</url>
   	</scm>
   	<developers>
   		<developer>
@@ -474,15 +474,17 @@
 	</reporting>
 
     <distributionManagement>
-		<repository>
-			<id>devlab722-repo</id>
-			<url>http://nexus.devlab722.net/nexus/content/repositories/releases</url>
-		</repository>
-		<snapshotRepository>
-			<id>devlab722-snapshot-repo</id>
-			<url>http://nexus.devlab722.net/nexus/content/repositories/snapshots</url>
-		</snapshotRepository>
-	</distributionManagement>
+        <snapshotRepository>
+            <id>allogy-maven-snapshot-public</id>
+            <name>Allogy public Maven release repository</name>
+            <url>s3://allogy.maven.public/snapshot</url>
+        </snapshotRepository>
+        <repository>
+            <id>allogy-maven-public</id>
+            <name>Allogy public Maven release repository</name>
+            <url>s3://allogy.maven.public/release</url>
+        </repository>
+    </distributionManagement>
 	<profiles>
         <profile>
             <id>mac-os-test</id>
